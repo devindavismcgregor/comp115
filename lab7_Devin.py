@@ -188,12 +188,13 @@ def students_id_occurrences(ids):
     - (dict): This is a dictionary containing the occurences of the each student id. 
 
     """
+    id_dict = {}
     for id in ids: 
-        if id in students_id_occurrences:
-            students_id_occurrences[id] += 1
+        if id in id_dict:
+            id_dict [id] += 1
         else:
-            students_id_occurrences[id] = 1
-    return students_id_occurrences
+            id_dict [id] = 1
+    return id_dict
 
 
 # Your unit tests
